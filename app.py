@@ -148,17 +148,17 @@ if st.button("PREDICT"):
         f"Based on the regression, I predict you are not a LinkedIn user.\
                 There is a {prob} percent chance you are a user."
 
-        fig = go.Figure(go.Indicator(
-            mode = "gauge+number",
-            value = prob,
-            title = {'text' : f"Prediction: {prediction_1}"},
-            gauge = {"axis": {"range": [0,100]},
-                    "steps": [
-                        {"range": [0, 40], "color":"lightgreen"},
-                        {"range": [40, 60], "color":"gray"},
-                        {"range": [60, 100], "color":"green"}
-                    ],
-                    "bar":{"color":"lightblue"}}
-        ))
+    fig = go.Figure(go.Indicator(
+        mode = "gauge+number",
+        value = prob,
+        title = {'text' : f"Prediction: {prediction_1}"},
+        gauge = {"axis": {"range": [0,100]},
+                "steps": [
+                    {"range": [0, 40], "color":"lightgreen"},
+                    {"range": [40, 60], "color":"gray"},
+                    {"range": [60, 100], "color":"green"}
+                ],
+                "bar":{"color":"lightblue"}}
+    ))
         
-        st.plotly_chart(fig)
+    st.plotly_chart(fig)
