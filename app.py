@@ -160,5 +160,5 @@ if st.button("PREDICT"):
                     ],
                     "bar":{"color":"lightblue"}}
         ))
-
-        fig
+        
+        st.plotly_chart(fig)
